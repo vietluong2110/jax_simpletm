@@ -1,7 +1,9 @@
-export CUDA_VISIBLE_DEVICES=6
+export XLA_PYTHON_CLIENT_PREALLOCATE=false
+
+export CUDA_VISIBLE_DEVICES=7
 model_name=SimpleBaseline
 python -u run_ca.py \
-  --is_training 1 \
+  --is_training 0 \
   --lradj 'TST' \
   --patience 10 \
   --train_epochs 20 \
@@ -28,10 +30,11 @@ python -u run_ca.py \
   --des 'Exp' \
   --itr 3 \
   --alpha 0.1 \
-  --l1_weight 5e-05
+  --l1_weight 5e-05 \
+  --benchmark True
 
 python -u run_ca.py \
-  --is_training 1 \
+  --is_training 0 \
   --lradj 'TST' \
   --patience 10 \
   --train_epochs 20 \
@@ -58,10 +61,11 @@ python -u run_ca.py \
   --des 'Exp' \
   --itr 3 \
   --alpha 0.1 \
-  --l1_weight 5e-5
+  --l1_weight 5e-5 \
+  --benchmark True
 
 python -u run_ca.py \
-  --is_training 1 \
+  --is_training 0 \
   --lradj 'TST' \
   --patience 10 \
   --train_epochs 20 \
@@ -88,10 +92,11 @@ python -u run_ca.py \
   --des 'Exp' \
   --itr 3 \
   --alpha 0.1 \
-  --l1_weight 5e-05
+  --l1_weight 5e-05 \
+  --benchmark True
 
 python -u run_ca.py \
-  --is_training 1 \
+  --is_training 0 \
   --lradj 'TST' \
   --patience 10 \
   --train_epochs 20 \
@@ -118,4 +123,5 @@ python -u run_ca.py \
   --des 'Exp' \
   --itr 3 \
   --alpha 0.1 \
-  --l1_weight 5e-5
+  --l1_weight 5e-5 \
+  --benchmark True

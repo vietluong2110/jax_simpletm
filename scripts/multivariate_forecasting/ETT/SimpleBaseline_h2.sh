@@ -1,6 +1,8 @@
+export XLA_PYTHON_CLIENT_PREALLOCATE=false
+
 export CUDA_VISIBLE_DEVICES=7
-model_name=JAX_SimpleBaseline
-python -u jax_run_ca.py \
+model_name=SimpleBaseline
+python -u run_ca.py \
   --is_training 0 \
   --lradj TST \
   --patience 3 \
@@ -30,7 +32,7 @@ python -u jax_run_ca.py \
   --l1_weight 0.0005 \
   --benchmark True
 
-python -u jax_run_ca.py \
+python -u run_ca.py \
   --is_training 0 \
   --lradj TST \
   --patience 3 \
@@ -60,7 +62,7 @@ python -u jax_run_ca.py \
   --l1_weight 0.005 \
   --benchmark True
 
-python -u jax_run_ca.py \
+python -u run_ca.py \
   --is_training 0 \
   --lradj TST \
   --patience 3 \
@@ -90,7 +92,7 @@ python -u jax_run_ca.py \
   --l1_weight 0.0 \
   --benchmark True
 
-python -u jax_run_ca.py \
+python -u run_ca.py \
   --is_training 0 \
   --lradj TST \
   --patience 3 \
